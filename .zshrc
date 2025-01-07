@@ -1,6 +1,7 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 ZSH_THEME="robbyrussell"
 
