@@ -1,0 +1,39 @@
+# background
+background = 11111B
+background-blur-radius = 20
+background-opacity = 0.95
+theme = catppuccin-mocha
+
+# font
+font-family = "Fira Code SemiBold"
+font-size = 19
+
+#top bar window
+macos-titlebar-style = tabs
+
+# cursor
+cursor-style = "block"
+cursor-style-blink = true
+shell-integration-features = no-cursor
+
+#mouse
+mouse-hide-while-typing = true
+cursor-click-to-move = true
+
+#keybinds
+keybind = ctrl+b=new_split:right
+keybind = cmd+backspace=text:\x15
+
+#shell
+shell-integration = zsh
+
+# macOS icon
+macos-icon = custom-style
+macos-icon-frame = aluminum
+macos-icon-ghost-color = 000000
+macos-icon-screen-color = FFFFFF
+
+# title
+# title = " "
+
+window-colorspace = display-p3
