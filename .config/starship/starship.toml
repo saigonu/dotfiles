@@ -282,7 +282,7 @@ format = '[( $symbol( $cluster) )]($style)'
 disabled = false
 
 [shell]
-disabled = false
+disabled = true
 format = '[  $indicator ]($style)'
 bash_indicator = "bash"
 fish_indicator = "fish"
