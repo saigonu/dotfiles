@@ -37,6 +37,9 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
   tmux attach-session -t default || tmux new-session -s default
 fi
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 eval "$(zoxide init zsh)"
 
 eval "$(starship init zsh)"
