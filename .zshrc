@@ -44,3 +44,4 @@ eval "$(zoxide init zsh)"
 
 eval "$(starship init zsh)"
 
+export PATH=$PATH:$HOME/.spicetify
