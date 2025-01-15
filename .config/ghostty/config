@@ -28,10 +28,10 @@ keybind = cmd+backspace=text:\x15
 shell-integration = zsh
 
 # macOS icon
-macos-icon = custom-style
-macos-icon-frame = aluminum
-macos-icon-ghost-color = 000000
-macos-icon-screen-color = FFFFFF
+#macos-icon = custom-style
+#macos-icon-frame = aluminum
+#macos-icon-ghost-color = 000000
+#macos-icon-screen-color = FFFFFF
 
 # title
 title = " "
