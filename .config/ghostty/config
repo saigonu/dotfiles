@@ -33,7 +33,7 @@ shell-integration = zsh
 # macos-icon-ghost-color = 000000
 # macos-icon-screen-color = FFFFFF
 
-# title
-title = " "
+# remove title config
+# title = " "
 
 window-colorspace = display-p3
