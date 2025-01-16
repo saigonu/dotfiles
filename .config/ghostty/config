@@ -1,7 +1,7 @@
 # background
-background = 11111B
-background-blur-radius = 20
-background-opacity = 0.95
+background = 181826
+#background-blur-radius = 20
+#background-opacity = 0.95
 theme = catppuccin-mocha
 
 # font
