@@ -14,6 +14,7 @@ return {
     opts = {
       no_italic = true,
       term_colors = true,
+      transparent_background = true,
       styles = {
         comments = {},
         conditionals = {},
