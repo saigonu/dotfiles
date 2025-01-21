@@ -13,6 +13,7 @@ alias ds="find . -name '.DS_Store' -type f -delete"
 alias gst="git status"
 alias c="code ."
 alias undo= "reset —soft HEAD~1"
+alias vim="nvim"
 
 gacp() {
   find . -name '.DS_Store' -type f -delete
