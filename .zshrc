@@ -39,7 +39,7 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 fi
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(zoxide init zsh)"
 
