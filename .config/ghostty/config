@@ -15,14 +15,25 @@ macos-titlebar-style = tabs
 cursor-style = "block"
 cursor-style-blink = true
 shell-integration-features = no-cursor
+cursor-click-to-move = true
 
 #mouse
 mouse-hide-while-typing = true
 cursor-click-to-move = true
 
 #keybinds
-keybind = ctrl+b=new_split:right
-keybind = cmd+backspace=text:\x15
+keybind = ctrl+a>r=new_split:right
+keybind = ctrl+a>d=new_split:down
+keybind = ctrl+a>l=new_split:left
+keybind = ctrl+a>a=new_split:auto
+
+keybind = ctrl+a>up=goto_split:up
+keybind = ctrl+a>right=goto_split:right
+keybind = ctrl+a>left=goto_split:left
+keybind = ctrl+a>down=goto_split:down
+
+
+keybind = global:cmd+grave_accent=toggle_quick_terminal
 
 #shell
 shell-integration = zsh
