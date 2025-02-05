@@ -34,9 +34,6 @@ export NVM_DIR="$HOME/.nvm"
 # Created by `pipx` on 2024-01-04 19:32:33
 export PATH="$PATH:/Users/sai/.local/bin"
 
-#if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-#  tmux attach-session -t default || tmux new-session -s default
-#fi
 
 # Set up fzf key bindings and fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
