@@ -1,4 +1,3 @@
-
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
@@ -43,5 +42,3 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 export PATH=$PATH:$HOME/.spicetify
-
-export PATH=$PATH:/Users/sai/.spicetify
