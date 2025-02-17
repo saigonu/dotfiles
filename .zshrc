@@ -2,6 +2,10 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+
 ZSH_THEME="robbyrussell"
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
@@ -13,6 +17,7 @@ alias gst="git status"
 alias c="code ."
 alias undo= "reset —soft HEAD~1"
 alias vim="nvim"
+alias air='$(go env GOPATH)/bin/air'
 
 gacp() {
   find . -name '.DS_Store' -type f -delete
@@ -38,7 +43,8 @@ export PATH="$PATH:/Users/sai/.local/bin"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(zoxide init zsh)"
-
+eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
 
 export PATH=$PATH:$HOME/.spicetify
+export PATH="$PATH:$HOME/go/bin"

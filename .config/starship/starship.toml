@@ -34,7 +34,6 @@ ${custom.keyboard_layout}\
 $time\
 $cmd_duration\
 $status\
-$line_break\
 $character\
 """
 
