@@ -6,7 +6,7 @@ theme = catppuccin-mocha
 
 # font
 font-family = "Fira Code SemiBold"
-font-size = 19
+font-size = 16
 
 #top bar window
 macos-titlebar-style = tabs
