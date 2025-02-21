@@ -100,6 +100,7 @@ alt-ctrl-shift-cmd-l = 'join-with right'
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
+alt-f = 'layout floating tiling'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left'
@@ -213,6 +214,27 @@ run = ['layout tiling', 'move-node-to-workspace Insomnia']
 if.app-id = 'com.apple.iCal'
 run = ['layout tiling', 'move-node-to-workspace Calendar']
 
+# Floater: Arc Card
+[[on-window-detected]]
+if.window-title-regex-substring = 'Sai'
+run = 'layout floating'
+
+# Floater: Finder 
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+# Floater: CleanMyMac
+[[on-window-detected]]
+if.app-id = 'com.macpaw.CleanMyMac-setapp'
+run = 'layout floating'
+
+# Floater: Messages 
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'layout floating'
+
+
 # Arc
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
@@ -237,6 +259,11 @@ run = ['layout tiling', 'move-node-to-workspace VSCode']
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = ['layout tiling', 'move-node-to-workspace Spotify']
+
+# Zen PiP
+[[on-window-detected]]
+if.window-title-regex-substring = 'Picture-in-Picture'
+run = 'layout floating'
 
 # Zen 
 [[on-window-detected]]
