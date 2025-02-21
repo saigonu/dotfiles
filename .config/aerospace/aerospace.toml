@@ -177,7 +177,7 @@ alt-shift-0 = 'move-node-to-workspace 10 --focus-follows-window'
 #9 = 'main'
 
 alt-tab = 'workspace-back-and-forth'
-cmd-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+alt-ctrl-shift-cmd-d = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
@@ -234,12 +234,6 @@ run = 'layout floating'
 if.app-id = 'com.apple.MobileSMS'
 run = 'layout floating'
 
-
-# Arc
-[[on-window-detected]]
-if.app-id = 'company.thebrowser.Browser'
-run = ['layout tiling', 'move-node-to-workspace Arc']
-
 # Obsidian
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
@@ -270,7 +264,24 @@ run = 'layout floating'
 if.app-id = 'app.zen-browser.zen'
 run = ['layout tiling', 'move-node-to-workspace Zen']
 
+# Mail Windows 
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'  # Mail's bundle ID
+if.window-title-regex-substring = '^(Re:|Reply:|Fwd:|Forward:|Draft)'
+run = 'layout floating'
+
 # Mail
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
 run = ['layout tiling', 'move-node-to-workspace Mail']
+
+# Arc Extensions 
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'  # Arc's bundle ID
+if.window-title-regex-substring = '^$'    # Match empty window titles
+run = 'layout floating'
+
+# Arc
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+run = ['layout tiling', 'move-node-to-workspace Arc']
