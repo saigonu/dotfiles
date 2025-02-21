@@ -202,7 +202,7 @@ backspace = ['close-all-windows-but-current', 'mode main']
 # Ghostty
 [[on-window-detected]]
 if.app-id = "com.mitchellh.ghostty"
-run = [ "layout floating", "move-node-to-workspace Ghostty", ]
+run = [ "layout tiling", "move-node-to-workspace Ghostty", ]
 
 # Insomnia
 [[on-window-detected]]
@@ -226,7 +226,7 @@ run = 'layout floating'
 
 # Floater: CleanMyMac
 [[on-window-detected]]
-if.app-id = 'com.macpaw.CleanMyMac-setapp'
+if.app-id = 'com.macpaw.CleanMyMac5'
 run = 'layout floating'
 
 # Floater: Messages 

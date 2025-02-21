@@ -5,9 +5,6 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
-
-ZSH_THEME="robbyrussell"
-
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -38,6 +35,11 @@ export NVM_DIR="$HOME/.nvm"
 # Created by `pipx` on 2024-01-04 19:32:33
 export PATH="$PATH:/Users/sai/.local/bin"
 
+# Eza
+alias l="eza -l --icons --git -a"
+alias lt="eza --tree --level=2 --long --icons --git"
+alias ltree="eza --tree --level=2  --icons --git"
+
 
 # Set up fzf key bindings and fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -48,3 +50,4 @@ eval "$(starship init zsh)"
 
 export PATH=$PATH:$HOME/.spicetify
 export PATH="$PATH:$HOME/go/bin"
+
