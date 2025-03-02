@@ -1,3 +1,20 @@
+# You can use it to add commands that run after AeroSpace startup.
+#
+# 'after-startup-command' is run after 'after-login-command'
+# Available commands : https://nikitabobko.github.io/AeroSpace/commands
+#after-startup-command = [
+#   # JankyBorders has a built-in detection of already running process,
+#   # so it won't be run twice on AeroSpace restart
+#  'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar',
+#  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=0.5'
+#]
+
+#exec-on-workspace-change = [
+#    '/bin/bash',
+#    '-c',
+#    '/opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change AEROSPACE_FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE AEROSPACE_PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE',
+#]
+
 # Start AeroSpace at login
 start-at-login = true
 
@@ -53,11 +70,11 @@ preset = 'qwerty'
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 0
-inner.vertical =   0
-outer.left =       0
-outer.bottom =     0
-outer.top =        0
-outer.right =      0
+inner.vertical = 0
+outer.top = 0
+outer.left = 0
+outer.bottom = 0
+outer.right = 0
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -119,16 +136,16 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-m = 'workspace Mail'
-alt-a = 'workspace Arc'
-alt-g = 'workspace Ghostty'
-alt-o = 'workspace Obsidian'
-alt-d = 'workspace Discord'
-alt-v = 'workspace VSCode'
-alt-s = 'workspace Spotify'
-alt-i = 'workspace Insomnia'
-alt-z = 'workspace Zen'
-alt-c = 'workspace Calendar'
+alt-m = 'workspace M'
+alt-a = 'workspace A'
+alt-g = 'workspace G'
+alt-o = 'workspace O'
+alt-v = 'workspace V'
+alt-s = 'workspace S'
+alt-i = 'workspace I'
+alt-z = 'workspace Z'
+alt-c = 'workspace C'
+alt-b = 'workspace B'
 
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
@@ -143,16 +160,17 @@ alt-0 = 'workspace 10'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 
-alt-shift-m = 'move-node-to-workspace Mail --focus-follows-window'
-alt-shift-a = 'move-node-to-workspace Arc --focus-follows-window'
-alt-shift-g = 'move-node-to-workspace Ghostty --focus-follows-window'
-alt-shift-o = 'move-node-to-workspace Obsidian --focus-follows-window'
-alt-shift-d = 'move-node-to-workspace Discord --focus-follows-window'
-alt-shift-v = 'move-node-to-workspace VSCode --focus-follows-window'
-alt-shift-s = 'move-node-to-workspace Spotify --focus-follows-window'
-alt-shift-i = 'move-node-to-workspace Insomnia --focus-follows-window'
-alt-shift-z = 'move-node-to-workspace Zen --focus-follows-window'
-alt-shift-c = 'move-node-to-workspace Calendar --focus-follows-window'
+alt-shift-m = 'move-node-to-workspace M --focus-follows-window'
+alt-shift-a = 'move-node-to-workspace A --focus-follows-window'
+alt-shift-g = 'move-node-to-workspace G --focus-follows-window'
+alt-shift-o = 'move-node-to-workspace O --focus-follows-window'
+alt-shift-d = 'move-node-to-workspace D --focus-follows-window'
+alt-shift-v = 'move-node-to-workspace V --focus-follows-window'
+alt-shift-s = 'move-node-to-workspace S --focus-follows-window'
+alt-shift-i = 'move-node-to-workspace I --focus-follows-window'
+alt-shift-z = 'move-node-to-workspace Z --focus-follows-window'
+alt-shift-c = 'move-node-to-workspace C --focus-follows-window'
+alt-shift-b = 'move-node-to-workspace B --focus-follows-window'
 
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
 alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
@@ -202,17 +220,17 @@ backspace = ['close-all-windows-but-current', 'mode main']
 # Ghostty
 [[on-window-detected]]
 if.app-id = "com.mitchellh.ghostty"
-run = [ "layout floating", "move-node-to-workspace Ghostty", ]
+run = [ 'layout floating', 'move-node-to-workspace G', ]
 
 # Insomnia
 [[on-window-detected]]
 if.app-id = 'com.insmnia.app'
-run = ['layout tiling', 'move-node-to-workspace Insomnia']
+run = ['layout tiling', 'move-node-to-workspace I']
 
 # Calendar
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
-run = ['layout tiling', 'move-node-to-workspace Calendar']
+run = ['layout tiling', 'move-node-to-workspace C']
 
 # Floater: Arc Card
 [[on-window-detected]]
@@ -237,24 +255,34 @@ run = 'layout floating'
 # Obsidian
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
-run = ['layout tiling', 'move-node-to-workspace Obsidian']
+run = ['layout tiling', 'move-node-to-workspace O']
 
 # Discord
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
-run = ['layout tiling', 'move-node-to-workspace Discord']
+run = ['layout tiling', 'move-node-to-workspace D']
 
 # VS Code
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
-run = ['layout tiling', 'move-node-to-workspace VSCode']
+run = ['layout tiling', 'move-node-to-workspace V']
+
+# Cursor 
+[[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92'
+run = ['layout tiling', 'move-node-to-workspace V']
+
+# VS Code
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = ['layout tiling', 'move-node-to-workspace V']
 
 # Spotify 
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
-run = ['layout tiling', 'move-node-to-workspace Spotify']
+run = ['layout tiling', 'move-node-to-workspace S']
 
-# Zen PiP
+# Zen: PiP
 [[on-window-detected]]
 if.window-title-regex-substring = 'Picture-in-Picture'
 run = 'layout floating'
@@ -262,7 +290,13 @@ run = 'layout floating'
 # Zen 
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
-run = ['layout tiling', 'move-node-to-workspace Zen']
+run = ['layout tiling', 'move-node-to-workspace B']
+
+# Zen: Save Image 
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+if.window-title-regex-substring = '^(Save Image)'
+run = 'layout floating'
 
 # Mail Windows 
 [[on-window-detected]]
@@ -273,7 +307,12 @@ run = 'layout floating'
 # Mail
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
-run = ['layout tiling', 'move-node-to-workspace Mail']
+run = ['layout tiling', 'move-node-to-workspace M']
+
+# Orion 
+[[on-window-detected]]
+if.app-id = 'com.kagi.kagimacOS'
+run = ['layout floating', 'move-node-to-workspace B']
 
 # Arc Extensions 
 [[on-window-detected]]
@@ -284,4 +323,4 @@ run = 'layout floating'
 # Arc
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
-run = ['layout tiling', 'move-node-to-workspace Arc']
+run = ['layout tiling', 'move-node-to-workspace B']

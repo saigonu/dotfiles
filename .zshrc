@@ -15,6 +15,7 @@ alias c="code ."
 alias undo= "reset —soft HEAD~1"
 alias vim="nvim"
 alias air='$(go env GOPATH)/bin/air'
+alias lazypodman='DOCKER_HOST=unix://$(podman machine inspect --format "{{.ConnectionInfo.PodmanSocket.Path}}") lazydocker'
 
 gacp() {
   find . -name '.DS_Store' -type f -delete
@@ -51,3 +52,4 @@ eval "$(starship init zsh)"
 export PATH=$PATH:$HOME/.spicetify
 export PATH="$PATH:$HOME/go/bin"
 
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
