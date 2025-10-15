@@ -16,7 +16,7 @@
 #]
 
 # Start AeroSpace at login
-start-at-login = true
+# start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -146,6 +146,8 @@ alt-i = 'workspace I'
 alt-z = 'workspace Z'
 alt-c = 'workspace C'
 alt-b = 'workspace B'
+alt-n = 'workspace N'
+alt-u = 'workspace H'
 
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
@@ -171,6 +173,8 @@ alt-shift-i = 'move-node-to-workspace I --focus-follows-window'
 alt-shift-z = 'move-node-to-workspace Z --focus-follows-window'
 alt-shift-c = 'move-node-to-workspace C --focus-follows-window'
 alt-shift-b = 'move-node-to-workspace B --focus-follows-window'
+alt-shift-n = 'move-node-to-workspace N --focus-follows-window'
+alt-shift-u = 'move-node-to-workspace H --focus-follows-window'
 
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
 alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
@@ -215,12 +219,28 @@ r = ['flatten-workspace-tree', 'mode main'] # reset layout
 f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
+#[[on-window-detected]]
+#if.window-title-regex-substring = 'Picture-in-Picture'
+#run = ['layout floating', 'move-node-to-workspace 4 --focus-follows-window']
 
+[workspace-to-monitor-force-assignment]
+4 = 'built-in'
+
+
+[[on-window-detected]]
+if.app-id = "net.imput.helium"
+if.window-title-regex-substring = 'Picture in Picture'
+run = 'layout floating'
 
 # Ghostty
 [[on-window-detected]]
 if.app-id = "com.mitchellh.ghostty"
-run = [ 'layout floating', 'move-node-to-workspace G', ]
+run = ['layout floating', 'move-node-to-workspace G' ]
+
+# Helium
+[[on-window-detected]]
+if.app-id = "net.imput.helium"
+run = ['layout floating', 'move-node-to-workspace H' ]
 
 # Insomnia
 [[on-window-detected]]
@@ -248,9 +268,9 @@ if.app-id = 'com.macpaw.CleanMyMac5'
 run = 'layout floating'
 
 # Floater: Messages 
-[[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'
-run = 'layout floating'
+#[[on-window-detected]]
+#if.app-id = 'com.apple.MobileSMS'
+#run = 'layout floating'
 
 # Obsidian
 [[on-window-detected]]
@@ -290,13 +310,23 @@ run = 'layout floating'
 # Zen 
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
-run = ['layout tiling', 'move-node-to-workspace B']
+run = ['layout floating', 'move-node-to-workspace B']
 
 # Zen: Save Image 
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
 if.window-title-regex-substring = '^(Save Image)'
 run = 'layout floating'
+
+# Reminders 
+[[on-window-detected]]
+if.app-id = 'com.apple.reminders'
+run = ['layout floating']
+
+# Notes 
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+run = ['layout floating']
 
 # Mail Windows 
 [[on-window-detected]]
@@ -307,7 +337,7 @@ run = 'layout floating'
 # Mail
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
-run = ['layout tiling', 'move-node-to-workspace M']
+run = ['layout floating', 'move-node-to-workspace M']
 
 # Orion 
 [[on-window-detected]]
@@ -323,4 +353,20 @@ run = 'layout floating'
 # Arc
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
-run = ['layout tiling', 'move-node-to-workspace B']
+run = ['layout floating', 'move-node-to-workspace B']
+
+# Dia
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.dia'
+run = ['layout floating', 'move-node-to-workspace B']
+
+# Notion
+[[on-window-detected]]
+if.app-id = 'notion.id'
+run = ['layout floating', 'move-node-to-workspace N']
+
+# Firefox
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefox'
+run = ['layout floating', 'move-node-to-workspace B']
+

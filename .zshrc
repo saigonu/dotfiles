@@ -1,5 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 export GOPATH=$HOME/go
@@ -53,3 +53,5 @@ export PATH=$PATH:$HOME/.spicetify
 export PATH="$PATH:$HOME/go/bin"
 
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$HOME/.local/bin:$PATH"
